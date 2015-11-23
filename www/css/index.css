@@ -1,0 +1,13 @@
+.add-life, .remove-life, .next-player {
+	display: none!important;
+}
+
+.active .add-life,.active .remove-life, .active .next-player {
+	display: inline!important;
+}
+
+.active {
+	font-size: 30px;
+}
+
+#settings-tab { display: none!important;}
