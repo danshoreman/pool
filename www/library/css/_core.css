@@ -1,0 +1,34 @@
+/*******************************
+ Table of Contents
+ 
+ 1: Max Grid Sizing
+ 2: Base Font Sizing
+ 3: Colours
+ 4: Typography
+ 5: Links
+
+
+/*******************************
+ 1: Max Grid Sizing
+*******************************/
+/*******************************
+  2: Base Font Sizing & Styling
+*******************************/
+/*******************************
+  3: Colours
+*******************************/
+/*******************************
+  4: TYPOGRAPHY
+*******************************/
+/*******************************
+  4: Links
+*******************************/
+@media only screen and (min-width: 64.063em) {
+  a, a:visited {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+}

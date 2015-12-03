@@ -1,3 +1,136 @@
+/*******************************
+ Table of Contents
+ 
+ 1: Max Grid Sizing
+ 2: Base Font Sizing
+ 3: Colours
+ 4: Typography
+ 5: Links
+
+
+/*******************************
+ 1: Max Grid Sizing
+*******************************/
+/*******************************
+  2: Base Font Sizing & Styling
+*******************************/
+/*******************************
+  3: Colours
+*******************************/
+/*******************************
+  4: TYPOGRAPHY
+*******************************/
+/*******************************
+  4: Links
+*******************************/
+@media only screen and (min-width: 64.063em) {
+  a, a:visited {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+/*********************
+GENERAL STYLES
+*********************/
 body {
+  -webkit-font-smoothing: antialiased;
   background: #90c653;
+}
+
+img,
+a img {
+  border: none;
+}
+
+.clearfix {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+p {
+  line-height: 1.3;
+}
+
+.content {
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 3rem 0;
+  text-align: center;
+  border: 1px solid #c1dfa0;
+}
+
+.content .main-logo {
+  width: 60%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.content .begin-btn {
+  background: #77ad39;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  display: inline-block;
+  margin-top: 3rem;
+  text-decoration: none;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.content .begin-btn:hover {
+  background: #699a33;
+}
+
+/*********************
+LINK STYLES
+*********************/
+a, a:visited,
+.gen-link {
+  text-decoration: underline;
+}
+
+a:hover, a:visited:hover,
+.gen-link:hover {
+  text-decoration: none;
+}
+
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+  text-rendering: optimizelegibility;
+}
+
+h1, .h1 {
+  font-size: 2.4rem;
+}
+
+h2, .h2 {
+  font-size: 2rem;
+}
+
+h3, .h3 {
+  font-size: 1.8rem;
+}
+
+h4, .h4 {
+  font-size: 1.5rem;
+}
+
+h5, .h5 {
+  font-size: 1.2rem;
 }

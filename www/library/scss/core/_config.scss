@@ -1,0 +1,91 @@
+/*******************************
+ Table of Contents
+ 
+ 1: Max Grid Sizing
+ 2: Base Font Sizing
+ 3: Colours
+ 4: Typography
+ 5: Links
+
+
+/*******************************
+ 1: Max Grid Sizing
+*******************************/
+
+
+
+/*******************************
+  2: Base Font Sizing & Styling
+*******************************/
+
+
+
+
+/*******************************
+  3: Colours
+*******************************/
+
+// Primary
+
+$black:             #242424;
+$white:             #ffffff;
+
+$lgrey:        			#f2f3f4;
+$grey:              #343434;
+$dgrey:							#313131;
+$bgrey:							#506675;
+$text:							#484848;
+
+$blue:							#40859b;
+$orange:						#d3492f;
+$red:								#e73e35;
+$yellow:						#e8f01a;
+$green:							#90c653;
+
+
+$link-color:        $blue;
+$link-hover:        darken($link-color, 10%);
+
+
+$border-color:      #ccc;
+$disabled-gray:     #cfcfcf;
+
+
+/*******************************
+  4: TYPOGRAPHY
+*******************************/
+
+// Font stacks
+$sans-serif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif:             "Georgia", Cambria, Times New Roman, Times, serif;
+
+// Change these to your own
+$header-font:       'Lato', $sans-serif;
+$body-font:		      'Lato', $sans-serif;
+
+
+/*******************************
+  4: Links
+*******************************/
+
+@media only screen and (min-width: 64.063em) {
+//@media (min-width: $screen-lg-min) {
+		
+		a, a:visited {
+			@include transition(all, 0.2s, ease-in-out);
+		}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
