@@ -11,6 +11,7 @@ body {
 	//color: $grey;
 	-webkit-font-smoothing: antialiased;
 	background: $green;
+	height: 100%;
 }
 
 img,
@@ -34,44 +35,82 @@ p{
 	line-height: 1.3;
 }
 
-.content{
-	max-width: 320px;
-	margin: 0 auto;
-	padding: 1rem 0;
-	text-align: center;
-	border: 1px solid lighten($green, 20%);
+.main-col{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 	
-	.main-logo{
-		width: 60%;
-		height: auto;
-		margin: 0 auto;
-		display: block;
-		@include transition(); 
-		
-		&.logo-click{
-			width: 20%;
-		}
-	}
+	.content{
+		position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  width: 320px;
+	  height: 568px;
+	  margin-left: -160px;
+	  margin-top: -284px;
+	  
+	  overflow: hidden;
+	  border: 1px solid lighten($green, 20%);
 	
-	.begin-btn{
-		background: darken($green, 10%);
-		color: $white;
-		text-transform: uppercase;
-		padding: 1rem 2rem;
-		display: inline-block;
-		margin-top: 3rem;
-		text-decoration: none;
-		cursor: pointer;
-		opacity: 1;
-		@include border-radius(50px);
-		@include transition();
+		.welcome{
 		
-		&:hover{
-			background: darken($green, 15%);
+			.main-logo{
+				width: 40%;
+				height: auto;
+				margin: 3rem auto 0;
+				display: block;
+				@include transition(all, 1s, ease-in-out);  
+				
+				&.logo-click{
+					width: 15%;
+					margin-top: 0.5rem;
+					margin-bottom: 0.5rem;
+				}
+			}
+			
+			.begin-btn{
+				background: darken($green, 10%);
+				color: $white;
+				text-transform: uppercase;
+				padding: 1rem 0;
+				text-align: center;
+				display: inline-block;
+				text-decoration: none;
+				cursor: pointer;
+				opacity: 1;
+				position: absolute;
+				bottom: 15%;
+				left: 50%;
+				margin-left: -95px;
+				width: 190px;
+				@include border-radius(50px);
+				@include transition(all, 1s, ease-in-out); 
+				
+				&:hover{
+					background: darken($green, 15%);
+				}
+				
+				&.begin-none{
+					opacity: 0;
+				}
+			}
 		}
 		
-		&.begin-none{
-			opacity: 0;
+		.add-players{
+			position: absolute;
+			top: 568px;
+			left: 0;
+			height: 498px;
+			width: 100%;
+			z-index: 1;
+			background: $white;
+			@include transition(all, 1s, ease-in-out); 
+			
+			&.player-position{
+				top: 70px;
+			}
 		}
 	}
 }
