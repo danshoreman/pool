@@ -85,17 +85,20 @@ p {
   height: auto;
   margin: 3rem auto 0;
   display: block;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .main-col .content .welcome .main-logo.logo-click {
-  width: 15%;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  /*
+width: 15%;
+					margin-top: 0.5rem;
+					margin-bottom: 0.5rem;
+*/
+  opacity: 0;
 }
 
 .main-col .content .welcome .begin-btn {
@@ -113,14 +116,16 @@ p {
   left: 50%;
   margin-left: -95px;
   width: 190px;
+  font-family: "proxima-nova",sans-serif;
+  font-weight: 800;
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   border-radius: 50px;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .main-col .content .welcome .begin-btn:hover {
@@ -131,44 +136,94 @@ p {
   opacity: 0;
 }
 
+.main-col .content .welcome .loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin-left: -25px;
+  margin-top: -25px;
+  display: none;
+}
+
+.main-col .content .welcome .loader.loading {
+  display: block;
+}
+
 .main-col .content .add-players {
   position: absolute;
   top: 568px;
   left: 0;
-  height: 498px;
+  height: 568px;
   width: 100%;
   z-index: 1;
   background: #ffffff;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  -webkit-transition: all 0.7s ease-in-out;
+  -moz-transition: all 0.7s ease-in-out;
+  -ms-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
 }
 
 .main-col .content .add-players.player-position {
-  top: 70px;
+  top: 0;
 }
 
 .main-col .content .add-players .players-title {
+  font-family: "proxima-nova",sans-serif;
+  font-weight: 800;
   text-transform: uppercase;
-  font-weight: bold;
   border-bottom: 2px dashed #d6d9dd;
   padding-left: 1rem;
   padding-right: 1rem;
   height: 60px;
   line-height: 60px;
+  color: #363a3c;
   margin: 0;
   font-size: 1.4rem;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .main-col .content .add-players .players-title .add-btn {
   float: right;
+  width: 30px;
+  height: 30px;
+}
+
+.main-col .content .add-players .players-title:hover {
+  background: #f2f3f4;
+}
+
+.main-col .content .add-players .name-entry {
+  display: none;
+}
+
+.main-col .content .add-players .name-entry .input-box {
+  width: 100%;
+  font-family: "proxima-nova",sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  color: #363a3c;
+  padding: 1rem;
+  outline: none;
+  border: none;
+}
+
+.main-col .content .add-players .name-entry.display-add-player {
+  display: block;
 }
 
 .main-col .content .add-players .player-list {
   margin: 0;
   padding: 0;
+  overflow: auto;
 }
 
 .main-col .content .add-players .player-list li {
@@ -179,9 +234,11 @@ p {
 
 .main-col .content .add-players .player-list li p {
   margin: 0;
+  font-family: "proxima-nova",sans-serif;
+  font-weight: 800;
   text-transform: uppercase;
-  font-weight: bold;
   font-size: 1.4rem;
+  color: #363a3c;
 }
 
 .main-col .content .add-players .player-list li:nth-child(2n+1) {
@@ -197,8 +254,10 @@ p {
   padding-left: 1rem;
   font-size: 1.4rem;
   line-height: 60px;
+  color: #363a3c;
+  font-family: "proxima-nova",sans-serif;
+  font-weight: 800;
   text-transform: uppercase;
-  font-weight: bold;
   border-top: 2px dashed #d6d9dd;
 }
 
@@ -210,14 +269,34 @@ p {
   font-size: 1.4rem;
   display: inline-block;
   float: right;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .main-col .content .add-players .playing .play-icon.kept-life {
   background: #90c653;
+  color: #ffffff;
+}
+
+.main-col .content .add-players .playing .play-icon.kept-life:hover {
+  background: #84c040;
 }
 
 .main-col .content .add-players .playing .play-icon.lost-life {
   background: #c93f56;
+  color: #ffffff;
+}
+
+.main-col .content .add-players .playing .play-icon.lost-life:hover {
+  background: #ba344b;
+}
+
+.main-col .content .add-players .playing .play-icon img {
+  width: 30px;
+  height: 30px;
 }
 
 /*********************

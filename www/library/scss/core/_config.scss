@@ -34,7 +34,7 @@ $lgrey:        			#f2f3f4;
 $grey:              #343434;
 $dgrey:							#313131;
 $bgrey:							#506675;
-$text:							#484848;
+$text:							#363a3c;
 
 $blue:							#40859b;
 $orange:						#d3492f;
@@ -63,6 +63,15 @@ $serif:             "Georgia", Cambria, Times New Roman, Times, serif;
 $header-font:       'Lato', $sans-serif;
 $body-font:		      'Lato', $sans-serif;
 
+@mixin font-heavy{
+	font-family: "proxima-nova",sans-serif;
+	font-weight: 800;
+}
+
+@mixin font-reg{
+	font-family: "proxima-nova",sans-serif;
+	font-weight: 400;
+}
 
 /*******************************
   4: Links

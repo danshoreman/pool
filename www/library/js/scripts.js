@@ -8,8 +8,26 @@
 			$('.main-logo').addClass('logo-click');
 			$('.begin-btn').addClass('begin-none');
 			
-			// add player screen
-			$('.add-players').addClass('player-position');
+			 setTimeout(function () {
+           $('.loader').addClass('loading');
+       }, 700);
+       
+       
+       setTimeout(function () {
+          // add player screen
+          $('.loader').removeClass('loading');
+					$('.add-players').addClass('player-position');
+       }, 2500);
+			
+			
+			
+			
 		});
+		
+		$(document).on('click','.players-title', function(e) {
+			// welcome page
+			$('.name-entry').slideToggle('fast');
+		});
+		
 	});
 })(jQuery);

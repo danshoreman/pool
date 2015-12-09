@@ -14,6 +14,9 @@
 <link rel="stylesheet" href="library/css/style.css">
 <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 
+<script src="https://use.typekit.net/nbo4dit.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -27,22 +30,29 @@
 			<div class="welcome">
 				<img src="library/images/killer-pool-logo.png" alt="" class="main-logo">
 				<span class="begin-btn">Begin Playing</span>
+				
+				<div class="loader">
+					<p><img src="library/images/ajax-loader.gif" alt="" class=""></p>
+				</div>
 			</div>
 			
 			<div class="add-players">
-				<p class="players-title">Players <span class="add-btn">+</span></p>
+				<p class="players-title">Players <span class="add-btn"><img src="library/images/gen/add-mark.svg" alt="" class=""></span></p>
+				
+				<form method="" id="" class="name-entry">
+					<input type="text" class="input-box" placeholder="Enter Name...">
+				</form>
 				
 				<ul class="player-list">
 					<li><p>Dan <span class="counter"></span></p></li>
 					<li><p>Stephan <span class="counter"></span></p></li>
-				</ul>	
-				
-				
-				
+					<li><p class="playing-in">Ross <span class="counter"></span></p></li>
+					<li><p class="playing-out">Matt</p></li>
+				</ul>
 				
 				<p class="playing">Playing 
-					<span class="play-icon lost-life">B</span>
-					<span class="play-icon kept-life">A</span>
+					<span class="play-icon lost-life"><img src="library/images/gen/cross-mark.svg" alt="" class=""></span>
+					<span class="play-icon kept-life"><img src="library/images/gen/check-mark.svg" alt="" class=""></span>
 				</p>
 			</div>
 		</div>
