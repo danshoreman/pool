@@ -20,8 +20,6 @@
        }, 2500);
 			
 			
-			
-			
 		});
 		
 		$(document).on('click','.players-title', function(e) {

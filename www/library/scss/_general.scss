@@ -7,8 +7,6 @@ html{
 }
 
 body {
-	//font-family: $body-font;
-	//color: $grey;
 	-webkit-font-smoothing: antialiased;
 	background: $green;
 	height: 100%;
@@ -57,9 +55,9 @@ p{
 		.welcome{
 		
 			.main-logo{
-				width: 40%;
+				width: 50%;
 				height: auto;
-				margin: 3rem auto 0;
+				margin: 5rem auto 0;
 				display: block;
 				@include transition(all, 0.5s, ease-in-out);  
 				
@@ -105,7 +103,6 @@ width: 15%;
 				position: absolute;
 				top: 50%;
 				left: 50%;
-				//background: white;
 				width: 50px;
 				height: 50px;
 				margin-left: -25px;
@@ -136,10 +133,7 @@ width: 15%;
 				@include font-heavy;
 				text-transform: uppercase;
 				border-bottom: 2px dashed darken($lgrey, 10%);
-				padding-left: 1rem;
-				padding-right: 1rem;
-				height: 60px;
-				line-height: 60px;
+				padding: 1rem;
 				color: $text;
 				margin: 0;
 				font-size: 1.4rem;
@@ -150,6 +144,7 @@ width: 15%;
 					float: right;
 					width: 30px;
 					height: 30px;
+					display: inline-block;
 				}
 				
 				&:hover{
@@ -192,6 +187,34 @@ width: 15%;
 						text-transform: uppercase;
 						font-size: 1.4rem;
 						color: $text;
+						
+						.counter{
+							width: 45px;
+							height: 40px;
+							background: url(../images/gen/ball.svg) center center no-repeat;
+							
+							@include back-size(cover);
+					    display: inline-block;
+					    float: right;
+					    text-align: center;
+					    line-height: 40px;
+					    color: $black;
+					    font-size: 18px;
+					    margin-top: -5px;
+					    
+					    &.red-ball .ball{fill: #ea0000;}
+					    &.green-ball .ball{fill: #00f125;}
+					    &.yellow-ball .ball{fill: #fbf700;}
+					    &.blue-ball .ball{fill: #2e5ec4;}
+						}
+					}
+					
+					&.playing-on{
+						background: #6cb9c4;
+						
+						p{
+							color: $white;
+						}
 					}
 					
 					&:nth-child(2n+1){
@@ -206,16 +229,14 @@ width: 15%;
 				left: 0;
 				width: 100%;
 				margin: 0;
-				padding-left: 1rem;
 				font-size: 1.4rem;
 				line-height: 60px;
 				color: $text;
 				@include font-heavy;
 				text-transform: uppercase;
-				border-top: 2px dashed darken($lgrey, 10%);
 				
 				.play-icon{
-					width: 60px;
+					width: 50%;
 					height: 60px;
 					line-height: 60px;
 					text-align: center;
