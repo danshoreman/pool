@@ -10,7 +10,7 @@
 			
 			 setTimeout(function () {
            $('.loader').addClass('loading');
-       }, 700);
+       }, 500);
        
        
        setTimeout(function () {
@@ -19,12 +19,21 @@
 					$('.add-players').addClass('player-position');
        }, 2500);
 			
-			
 		});
 		
 		$(document).on('click','.players-title', function(e) {
 			// welcome page
 			$('.name-entry').slideToggle('fast');
+		});
+		
+		$(document).on('click','.kept-life', function(e) {
+			// button anim
+			$('.player-list .playing-on').addClass('playing-on-in');
+		});
+		
+		$(document).on('click','.lost-life', function(e) {
+			// button anim off
+			$('.player-list .playing-on').removeClass('playing-on-in');
 		});
 		
 	});

@@ -59,7 +59,7 @@ p{
 				height: auto;
 				margin: 5rem auto 0;
 				display: block;
-				@include transition(all, 0.5s, ease-in-out);  
+				@include transition(all, 0.3s, ease-in-out);  
 				
 				&.logo-click{
 					/*
@@ -88,7 +88,7 @@ width: 15%;
 				width: 190px;
 				@include font-heavy;
 				@include border-radius(50px);
-				@include transition(all, 0.5s, ease-in-out); 
+				@include transition(all, 0.3s, ease-in-out); 
 				
 				&:hover{
 					background: darken($green, 15%);
@@ -123,7 +123,7 @@ width: 15%;
 			width: 100%;
 			z-index: 1;
 			background: $white;
-			@include transition(all, 0.7s, ease-in-out); 
+			@include transition(all, 0.5s, ease-in-out); 
 			
 			&.player-position{
 				top: 0;
@@ -174,12 +174,14 @@ width: 15%;
 			.player-list{
 				margin: 0;
 				padding: 0;
-				overflow: auto;
+				overflow-x: scroll;
+				height: 446px;
 				
 				li{
 					list-style-type: none;
 					padding: 1rem;
 					border-bottom: 2px dashed darken($lgrey, 10%);
+					@include transition(all, 0.5s, ease-in-out);
 					
 					p{
 						margin: 0;
@@ -187,12 +189,11 @@ width: 15%;
 						text-transform: uppercase;
 						font-size: 1.4rem;
 						color: $text;
+						@include transition(all, 0.5s, ease-in-out);
 						
 						.counter{
 							width: 45px;
 							height: 40px;
-							background: url(../images/gen/ball.svg) center center no-repeat;
-							
 							@include back-size(cover);
 					    display: inline-block;
 					    float: right;
@@ -201,15 +202,16 @@ width: 15%;
 					    color: $black;
 					    font-size: 18px;
 					    margin-top: -5px;
-					    
-					    &.red-ball .ball{fill: #ea0000;}
-					    &.green-ball .ball{fill: #00f125;}
-					    &.yellow-ball .ball{fill: #fbf700;}
-					    &.blue-ball .ball{fill: #2e5ec4;}
+					    background: url(../images/gen/ball.svg) center center no-repeat;
+					    /*
+					    &.red-ball{background: url(../images/gen/red-ball.svg) center center no-repeat;}
+					    &.green-ball{background: url(../images/gen/green-ball.svg) center center no-repeat;}
+					    &.yellow-ball{background: url(../images/gen/yellow-ball.svg) center center no-repeat;}
+					    &.blue-ball{background: url(../images/gen/blue-ball.svg) center center no-repeat;}*/
 						}
 					}
 					
-					&.playing-on{
+					&.playing-on-in{
 						background: #6cb9c4;
 						
 						p{
@@ -242,7 +244,7 @@ width: 15%;
 					text-align: center;
 					font-size: 1.4rem;
 					display: inline-block;
-					float: right;
+					float: left;
 					@include transition();
 					
 					&.kept-life{
